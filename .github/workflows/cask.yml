@@ -1,0 +1,24 @@
+name: Validate casks
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - name: Check out tap
+        # Pin the action revision so cask validation is reproducible and reviewable.
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Audit casks
+        run: |
+          # Validate the same cask DSL and checksum policy that end users rely on during installation.
+          brew style Casks/*.rb
+          brew audit --cask --strict Casks/*.rb
