@@ -19,6 +19,7 @@ jobs:
 
       - name: Audit casks
         run: |
-          # Validate the same cask DSL and checksum policy that end users rely on during installation.
+          # Audit by tap name because current Homebrew intentionally rejects filesystem paths for this command.
           brew style Casks/*.rb
-          brew audit --cask --strict Casks/*.rb
+          brew tap HilMail/hilmail
+          brew audit --cask --strict --tap HilMail/hilmail
