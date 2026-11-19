@@ -1,6 +1,6 @@
 cask "hilmail@beta" do
-  version "0.24"
-  sha256 "2c51b6aee358a40c3e8f4b7533914f942361a920124faa42bd53d785a69f3153"
+  version "0.28"
+  sha256 "eceab49a56d56064f4a106af814b4c5e44dc4718c8e135e6c086208ff94f0063"
 
   url "https://github.com/HilMail/hilmail-ios/releases/download/v#{version}/HilMail-v#{version}-macOS-arm64-Preview.dmg"
   name "HilMail Beta"
@@ -13,7 +13,7 @@ cask "hilmail@beta" do
 
   app "HilMail.app"
 
-  # Beta previews are ad hoc signed until the production Developer ID and notarization pipeline is configured.
+  # Preview builds are intentionally kept distinct from a future notarized stable channel.
   caveats <<~EOS
     This is a HilMail prerelease for internal testing.
     The app is ad hoc signed and may require a Gatekeeper confirmation before first launch.
