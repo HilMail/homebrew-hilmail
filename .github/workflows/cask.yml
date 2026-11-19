@@ -22,4 +22,6 @@ jobs:
           # Audit by tap name because current Homebrew intentionally rejects filesystem paths for this command.
           brew style Casks/*.rb
           brew tap HilMail/hilmail
+          # Homebrew requires an explicit trust record before evaluating casks outside its official taps.
+          brew trust --tap HilMail/hilmail
           brew audit --cask --strict --tap HilMail/hilmail
