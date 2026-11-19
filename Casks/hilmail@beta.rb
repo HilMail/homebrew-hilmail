@@ -1,4 +1,4 @@
-cask "hilmail-beta" do
+cask "hilmail@beta" do
   version "0.24"
   sha256 "2c51b6aee358a40c3e8f4b7533914f942361a920124faa42bd53d785a69f3153"
 
