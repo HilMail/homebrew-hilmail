@@ -1,6 +1,6 @@
 cask "hilmail@beta" do
-  version "0.43"
-  sha256 "c59e103dee582d03adeafc8e202cce1e0cdfe527ab060f3a3d501600e357d487"
+  version "0.45"
+  sha256 "417319e2e64256dec2b8171cb2c380cd11889769a0ea458d293404098b2b17bf"
 
   url "https://github.com/HilMail/homebrew-hilmail/releases/download/v#{version}/HilMail-v#{version}-macOS-arm64-Preview.dmg"
   name "HilMail Beta"
